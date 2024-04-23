@@ -6,9 +6,9 @@ buildscript {
     ext {
         androidXCore = "1.6.0" // <-- Add this line
         buildToolsVersion = "29.0.3"
-        minSdkVersion = 21
-        compileSdkVersion = 30
-        targetSdkVersion = 33
+        minSdkVersion = 24
+        compileSdkVersion = 34
+        targetSdkVersion = 34
         ndkVersion = "20.1.5948944"
     }
     repositories {
