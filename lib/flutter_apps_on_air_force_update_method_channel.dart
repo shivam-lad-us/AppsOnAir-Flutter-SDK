@@ -4,34 +4,30 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_apps_on_air/flutter_apps_on_air.dart';
 
-import 'flutter_app_update_package_platform_interface.dart';
+import 'flutter_apps_on_air_force_update_platform_interface.dart';
 
-/// An implementation of [FlutterAppUpdatePackagePlatform] that uses method channels.
-class MethodChannelFlutterAppUpdatePackage
-    extends FlutterAppUpdatePackagePlatform {
+/// An implementation of [FlutterAppsOnAirForceUpdatePlatform] that uses method channels.
+class MethodChannelFlutterAppsOnAirForceUpdate
+    extends FlutterAppsOnAirForceUpdatePlatform {
   /// The method channel used to interact with the native platform.
+  @visibleForTesting
+  final methodChannel = const MethodChannel('flutter_apps_on_air_force_update');
+
   late BuildContext context;
   bool _dialogOpen = false;
-  @visibleForTesting
-  final methodChannel = const MethodChannel('updateCheck/isUpdateAvailable');
 
-  ///[context] is required to show dialog
-  ///[isShowNative] is used to show [customWidget]
-  ///[isShowNative] turn it off if you want to show your [customWidget]
-  /// you can show your [customWidget] ui
   @override
   Future<void> initMethod(
     BuildContext context, {
-    required String appId,
     bool showNativeUI = false,
     Widget? Function(Map<String, dynamic> response)? customWidget,
   }) async {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
       this.context = context;
-      final result = await methodChannel.invokeMethod(
-          'setApplicationID', {"AppId": appId, "showNativeUI": showNativeUI});
-      if (result) {
+      String appId = FlutterAppsOnAir.applicationId;
+      if (appId.isNotEmpty && appId != "") {
         _listenToNativeMethod();
         final appUpdateResponse = await _check();
         if (customWidget != null) {
