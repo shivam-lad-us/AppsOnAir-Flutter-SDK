@@ -1,12 +1,12 @@
-name: appsonair_flutter_sdk
-description: AppsOnAir flutter sdk enables you to configure the version update of your app directly through AppsOnAir.
-version: 0.2.2 
-# homepage:
-repository: https://github.com/apps-on-air/AppsOnAir-Flutter-SDK
+name: flutter_apps_on_air
+description: "A new Flutter plugin project."
+version: 0.0.1
+homepage:
+publish_to: none
 
 environment:
-  sdk: ">=2.18.6 <3.0.0"
-  flutter: ">=2.5.0"
+  sdk: '>=3.3.3 <4.0.0'
+  flutter: '>=3.3.0'
 
 dependencies:
   flutter:
@@ -16,7 +16,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -36,10 +36,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.lwpackage.applicationupdate.flutter_app_update_package
-        pluginClass: FlutterAppUpdatePackagePlugin
+        package: com.shivam.flutter_apps_on_air
+        pluginClass: FlutterAppsOnAirPlugin
       ios:
-        pluginClass: FlutterAppUpdatePackagePlugin
+        pluginClass: FlutterAppsOnAirPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

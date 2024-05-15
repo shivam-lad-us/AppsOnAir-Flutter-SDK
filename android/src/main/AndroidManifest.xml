@@ -1,13 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.lwpackage.applicationupdate.flutter_app_update_package">
+  package="com.shivam.flutter_apps_on_air">
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <application
-    android:usesCleartextTraffic="true"
-
-    >
-
+      <!-- add meta-data inside application tag -->
+    <application>
+        <!-- App icon for dialog  -->
         <meta-data
             android:name="com.appsonair.icon"
             android:resource="@drawable/app_icon" />
@@ -15,16 +12,7 @@
         <!-- App name for dialog  -->
         <meta-data
             android:name="com.appsonair.name"
-            android:value="@string/app_name" />
-<!--        <activity-->
-<!--        android:theme="@style/Theme.AppCompat.Light"-->
-<!--        android:name="com.lwpackage.applicationupdate.appsonairsetup.AppUpdateActivity"-->
-<!--        android:exported="false"/>-->
-
-<!--        <activity-->
-<!--            android:theme="@style/Theme.AppCompat.Light"-->
-<!--            android:name="com.lwpackage.applicationupdate.appsonairsetup.MaintenanceActivity"-->
-<!--            android:exported="false"/>-->
-
+            android:value="app_name" />
     </application>
+
 </manifest>
