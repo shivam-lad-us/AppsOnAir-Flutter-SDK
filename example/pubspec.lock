@@ -73,9 +73,11 @@ packages:
   flutter_apps_on_air:
     dependency: "direct main"
     description:
-      path: "/Users/st-dt-mb-lw226/Desktop/Studio Projects/flutter_apps_on_air"
-      relative: false
-    source: path
+      path: "."
+      ref: "split/appsonair_core"
+      resolved-ref: "24cf7a0e8f162a757c7f3f08d968cfdc4f31aa12"
+      url: "git@github.com:shivam-lad-us/AppsOnAir-Flutter-SDK.git"
+    source: git
     version: "0.0.1"
   flutter_apps_on_air_force_update:
     dependency: "direct main"

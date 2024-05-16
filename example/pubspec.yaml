@@ -26,7 +26,9 @@ dependencies:
     path: ../
 
   flutter_apps_on_air:
-    path: /Users/st-dt-mb-lw226/Desktop/Studio Projects/flutter_apps_on_air
+    git:
+      url: git@github.com:shivam-lad-us/AppsOnAir-Flutter-SDK.git
+      ref: split/appsonair_core
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
