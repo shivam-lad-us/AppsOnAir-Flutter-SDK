@@ -5,7 +5,6 @@ import 'package:flutter_apps_on_air_force_update/flutter_apps_on_air_force_updat
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final appsOnAirCore = FlutterAppsOnAir();
   final result = await FlutterAppsOnAir.setAppId(
       "951705c2-5728-4c1f-bdf9-f3216a4de9ad",
       showNativeUI: true);

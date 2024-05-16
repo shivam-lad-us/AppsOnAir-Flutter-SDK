@@ -13,7 +13,9 @@ dependencies:
   plugin_platform_interface: ^2.0.2
   
   flutter_apps_on_air:
-    path: /Users/st-dt-mb-lw226/Desktop/Studio Projects/flutter_apps_on_air
+    git:
+      url: git@github.com:shivam-lad-us/AppsOnAir-Flutter-SDK.git
+      ref: split/appsonair_core
 
 dev_dependencies:
   flutter_test:
